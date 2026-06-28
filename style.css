@@ -1,0 +1,311 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    text-decoration:none;
+    list-style:none;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#fff;
+    color:#333;
+}
+
+/* Header */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+    z-index:1000;
+}
+
+.logo{
+    font-size:28px;
+    color:#e67e22;
+    font-weight:700;
+}
+
+.logo i{
+    margin-right:8px;
+}
+
+.navbar a{
+    margin-left:25px;
+    color:#333;
+    font-weight:500;
+    transition:.3s;
+}
+
+.navbar a:hover{
+    color:#e67e22;
+}
+
+#menu-bar{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* Common */
+
+section{
+    padding:100px 8%;
+}
+
+.heading{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:50px;
+    color:#e67e22;
+}
+
+/* Home */
+
+.home{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    min-height:100vh;
+    padding:120px 8% 60px;
+    gap:40px;
+}
+
+.home .content{
+    flex:1;
+    padding-top:50px;
+}
+
+.home .content h3{
+    font-size:60px;
+    line-height:1.2;
+    margin-bottom:20px;
+    color:#222;
+}
+
+.home .content p{
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:30px;
+    color:#666;
+}
+
+.home .image{
+    flex:1;
+}
+
+.home img{
+    width:100%;
+    max-width:500px;
+    border-radius:20px;
+}
+
+.btn{
+    padding:15px 35px;
+    border-radius:50px;
+    font-size:18px;
+}
+
+.btn:hover{
+    background:#d35400;
+}
+
+/* About */
+
+.row{
+    display:flex;
+    align-items:center;
+    gap:40px;
+}
+
+.row img{
+    width:100%;
+    border-radius:15px;
+}
+
+.row .image,
+.row .content{
+    flex:1;
+}
+
+/* Menu */
+
+.box-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.box{
+    background:#fff;
+    border-radius:15px;
+    overflow:hidden;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+    transition:.4s;
+}
+
+.box:hover{
+    transform:translateY(-10px);
+}
+
+.box img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.box h3{
+    margin-top:15px;
+}
+
+.box p{
+    margin:10px;
+}
+
+.box span{
+    color:#e67e22;
+    font-size:22px;
+    font-weight:600;
+    display:block;
+    margin-bottom:20px;
+}
+
+/* Services */
+
+.service-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.service{
+    text-align:center;
+    padding:30px;
+    background:#fff;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+.service i{
+    font-size:50px;
+    color:#e67e22;
+    margin-bottom:20px;
+}
+
+/* Reviews */
+
+.review-box{
+    background:#fff;
+    margin:20px auto;
+    max-width:700px;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+    text-align:center;
+}
+
+/* Contact */
+
+form{
+    max-width:700px;
+    margin:auto;
+}
+
+form input,
+form textarea{
+    width:100%;
+    padding:15px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:10px;
+}
+
+textarea{
+    height:150px;
+    resize:none;
+}
+
+form button{
+    border:none;
+    cursor:pointer;
+}
+
+/* Footer */
+
+footer{
+    background:#222;
+    color:#fff;
+    text-align:center;
+    padding:20px;
+}
+
+/* Animation */
+
+@keyframes float{
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-15px);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+#menu-bar{
+display:block;
+}
+
+.navbar{
+position:absolute;
+top:100%;
+left:0;
+width:100%;
+background:#fff;
+display:none;
+flex-direction:column;
+text-align:center;
+padding:20px 0;
+}
+
+.navbar.active{
+display:flex;
+}
+
+.navbar a{
+margin:15px 0;
+}
+
+.home,
+.row{
+flex-direction:column;
+text-align:center;
+}
+
+.home .content h3{
+font-size:38px;
+}
+
+.heading{
+font-size:32px;
+}
+
+}
